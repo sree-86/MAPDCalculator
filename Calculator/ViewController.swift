@@ -19,8 +19,15 @@ class ViewController: UIViewController {
     
     
     @IBAction func digits(_ sender: UIButton) {
+        if mathFunction == true{
+            result.text = String(sender.tag-1)
+            valOnScreen = Double(result.text!)!
+            mathFunction = false
+        }
+        else{
         result.text! += String(sender.tag-1)
         valOnScreen = Double(result.text!)!
+        }
     }
     
     @IBAction func functions(_ sender: UIButton) {
@@ -48,6 +55,33 @@ class ViewController: UIViewController {
             arithop = sender.tag
             mathFunction = true
         }
+        else if sender.tag == 11
+        {
+            if arithop == 12
+            {
+                result.text = String(firstval + valOnScreen)
+            }
+            else if arithop == 13
+            {
+                result.text = String(firstval - valOnScreen)
+            }
+            else if arithop == 14
+            {
+                result.text = String(firstval * valOnScreen)
+            }
+            else if arithop == 15
+            {
+                result.text = String(firstval / valOnScreen)
+            }
+        }
+            else if sender.tag == 17
+        {
+            result.text = ""
+            firstval = 0
+            valOnScreen = 0
+            arithop = 0
+        }
+        
     }
     
     
