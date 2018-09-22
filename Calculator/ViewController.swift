@@ -9,10 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var valOnScreen:Double = 0
 
+    @IBOutlet weak var result: UILabel!
+    
+    
     @IBAction func digits(_ sender: UIButton) {
-        
-        
+        result.text! += String(sender.tag-1)
+        valOnScreen = Double(result.text!)!
     }
     
     
