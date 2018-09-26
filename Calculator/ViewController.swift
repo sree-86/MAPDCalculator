@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var firstval:Double = 0
     var mathFunction  = false
     var arithop = 0
+    var hasDecimal:Bool = false
     
     @IBOutlet weak var result: UILabel!
     
@@ -32,7 +33,40 @@ class ViewController: UIViewController {
     
     @IBAction func functions(_ sender: UIButton) {
         
-        if result.text != "" && sender.tag != 11 && sender.tag != 16
+        if(result.text == "0") {
+            
+            if(sender.tag != 18) {
+                result.text = ""
+                
+            }
+            else {
+                if(hasDecimal) {
+                    result.text = "0"
+                }
+            }
+            
+        }
+ 
+        if(sender.tag == 18) {
+            if(!hasDecimal) {
+                result.text?.append(".")
+                hasDecimal = true
+            }
+        }/*
+        else {
+            result.text?.append(String(sender.tag))
+        }*/
+        
+        if sender.tag == 17
+        {
+            result.text = ""
+            firstval = 0
+            valOnScreen = 0
+            arithop = 0
+            hasDecimal = false
+        }
+        
+        if result.text != "" && sender.tag != 11 && sender.tag != 16 && mathFunction == false
         {
             firstval = Double(result.text!)!
             if sender.tag == 12
@@ -54,6 +88,7 @@ class ViewController: UIViewController {
             
             arithop = sender.tag
             mathFunction = true
+            hasDecimal = false
         }
         else if sender.tag == 11
         {
@@ -74,7 +109,11 @@ class ViewController: UIViewController {
                 result.text = String(firstval / valOnScreen)
             }
         }
-            else if sender.tag == 17
+        else if sender.tag == 16
+        {
+            
+        }
+        else if sender.tag == 17
         {
             result.text = ""
             firstval = 0
@@ -82,7 +121,11 @@ class ViewController: UIViewController {
             arithop = 0
         }
         
+        
+        
     }
+        
+    
     
     
     override func viewDidLoad() {

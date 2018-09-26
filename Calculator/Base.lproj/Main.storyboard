@@ -26,6 +26,9 @@
                                 <state key="normal" title=".">
                                     <color key="titleColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="functions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7rg-gk-ayx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1h-A9-9Bf">
                                 <rect key="frame" x="0.0" y="480" width="94" height="94"/>
@@ -213,7 +216,7 @@
                                     <color key="titleColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="functions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cT4-d9-iqB"/>
+                                    <action selector="functions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gM6-Bd-LmP"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="289-1F-5R0">
