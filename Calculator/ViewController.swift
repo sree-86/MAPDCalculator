@@ -1,6 +1,6 @@
 //
-//  ViewController.swift
-//  Calculator
+//  File Name : Calculator
+//  Student ID : 301042442
 //
 //  Created by Sreeram Ramakrishnan on 2018-09-22.
 //  Copyright © 2018 Centennial College. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController { // Main View Controller Class
     
     var valOnScreen:Double = 0
     var firstval:Double = 0
@@ -16,9 +16,9 @@ class ViewController: UIViewController {
     var arithop = 0
     var hasDecimal:Bool = false
     
-    @IBOutlet weak var result: UILabel!
+    @IBOutlet weak var result: UILabel! //Outlet for Result Label
     
-    @IBAction func ArithDec(_ sender: UIButton) {
+    @IBAction func ArithDec(_ sender: UIButton) { //Action method for the decimal point
         
         if(sender.tag==18){
         if(!hasDecimal){
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func digits(_ sender: UIButton) {
+    @IBAction func digits(_ sender: UIButton) { //Action method for the numbers
         if mathFunction == true{
             result.text = String(sender.tag-1)
             valOnScreen = Double(result.text!)!
@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func functions(_ sender: UIButton) {
+    @IBAction func functions(_ sender: UIButton) { //Action method for the various arithmetic operations and clear screen
         
         if result.text != "" && sender.tag != 11 && sender.tag != 16
         {
