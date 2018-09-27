@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     var firstval:Double = 0
     var mathFunction  = false
     var arithop = 0
-    var hasDecimal:Bool = false
     
     @IBOutlet weak var result: UILabel!
     
@@ -26,47 +25,14 @@ class ViewController: UIViewController {
             mathFunction = false
         }
         else{
-        result.text! += String(sender.tag-1)
-        valOnScreen = Double(result.text!)!
+            result.text! += String(sender.tag-1)
+            valOnScreen = Double(result.text!)!
         }
     }
     
     @IBAction func functions(_ sender: UIButton) {
         
-        if(result.text == "0") {
-            
-            if(sender.tag != 18) {
-                result.text = ""
-                
-            }
-            else {
-                if(hasDecimal) {
-                    result.text = "0"
-                }
-            }
-            
-        }
- 
-        if(sender.tag == 18) {
-            if(!hasDecimal) {
-                result.text?.append(".")
-                hasDecimal = true
-            }
-        }/*
-        else {
-            result.text?.append(String(sender.tag))
-        }*/
-        
-        if sender.tag == 17
-        {
-            result.text = ""
-            firstval = 0
-            valOnScreen = 0
-            arithop = 0
-            hasDecimal = false
-        }
-        
-        if result.text != "" && sender.tag != 11 && sender.tag != 16 && mathFunction == false
+        if result.text != "" && sender.tag != 11 && sender.tag != 16
         {
             firstval = Double(result.text!)!
             if sender.tag == 12
@@ -88,7 +54,13 @@ class ViewController: UIViewController {
             
             arithop = sender.tag
             mathFunction = true
-            hasDecimal = false
+        }
+        if sender.tag == 17
+        {
+            result.text = ""
+            firstval = 0
+            valOnScreen = 0
+            arithop = 0
         }
         else if sender.tag == 11
         {
@@ -109,35 +81,21 @@ class ViewController: UIViewController {
                 result.text = String(firstval / valOnScreen)
             }
         }
-        else if sender.tag == 16
-        {
-            
-        }
-        else if sender.tag == 17
-        {
-            result.text = ""
-            firstval = 0
-            valOnScreen = 0
-            arithop = 0
-        }
-        
         
         
     }
-        
-    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
