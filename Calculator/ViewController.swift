@@ -14,9 +14,22 @@ class ViewController: UIViewController {
     var firstval:Double = 0
     var mathFunction  = false
     var arithop = 0
+    var hasDecimal:Bool = false
     
     @IBOutlet weak var result: UILabel!
     
+    @IBAction func ArithDec(_ sender: UIButton) {
+        
+        if(sender.tag==18){
+        if(!hasDecimal){
+            result.text?.append(".")
+            hasDecimal = true
+        }
+    }
+        else {
+            result.text?.append(String(sender.tag-1))
+        }
+    }
     
     @IBAction func digits(_ sender: UIButton) {
         if mathFunction == true{
@@ -54,6 +67,7 @@ class ViewController: UIViewController {
             
             arithop = sender.tag
             mathFunction = true
+            hasDecimal = false
         }
         if sender.tag == 17
         {

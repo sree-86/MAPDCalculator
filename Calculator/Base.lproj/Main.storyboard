@@ -27,7 +27,7 @@
                                     <color key="titleColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="functions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7rg-gk-ayx"/>
+                                    <action selector="ArithDec:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ebx-N2-yPH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1h-A9-9Bf">
