@@ -1,6 +1,6 @@
 //
-//  ViewController.swift
-//  Calculator
+//  App Name : Calculator
+//  Student ID : 301042442
 //
 //  Created by Sreeram Ramakrishnan on 2018-09-22.
 //  Copyright © 2018 Centennial College. All rights reserved.
@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController {                                // View Controller Main Function
+    
+    //variables
     
     var valOnScreen:Double = 0
     var firstval:Double = 0
@@ -16,22 +18,11 @@ class ViewController: UIViewController {
     var arithop = 0
     var hasDecimal:Bool = false
     
-    @IBOutlet weak var result: UILabel!
+    @IBOutlet weak var result: UILabel!                             // Outlet for Result Label
     
-    @IBAction func ArithDec(_ sender: UIButton) {
-        
-        if(sender.tag==18){
-            if(!hasDecimal){
-                result.text?.append(".")
-                hasDecimal = true
-            }
-        }
-        else {
-            result.text?.append(String(sender.tag-1))
-        }
-    }
     
-    @IBAction func digits(_ sender: UIButton) {
+    
+    @IBAction func digits(_ sender: UIButton) {                         //Arithmetic Operand Action
         if mathFunction == true{
             result.text = String(sender.tag-1)
             valOnScreen = Double(result.text!)!
@@ -43,7 +34,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func functions(_ sender: UIButton) {
+    @IBAction func functions(_ sender: UIButton) {                  //Arithmetic Operation Action
         
         if result.text != "" && sender.tag != 11 && sender.tag != 16 && mathFunction ==  false
         {
@@ -103,7 +94,7 @@ class ViewController: UIViewController {
         
     }
     
-    @IBAction func DeleteFunc(_ sender: UIButton) {
+    @IBAction func DeleteFunc(_ sender: UIButton) {                     //Clear Action
         if sender.tag == 16
         {
             if (result.text!).count > 0
@@ -115,6 +106,19 @@ class ViewController: UIViewController {
                     mathFunction = false
                 }
             }
+        }
+    }
+    
+    @IBAction func ArithDec(_ sender: UIButton) {                   // Decimal Function Action
+        
+        if(sender.tag==18){
+            if(!hasDecimal){
+                result.text?.append(".")
+                hasDecimal = true
+            }
+        }
+        else {
+            result.text?.append(String(sender.tag-1))
         }
     }
     

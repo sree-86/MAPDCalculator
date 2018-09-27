@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3009DFD5215DA2D70012BF5B /* Splash-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3009DFD4215DA2D70012BF5B /* Splash-2.png */; };
 		30E3C9462156D48C00144D22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E3C9452156D48C00144D22 /* AppDelegate.swift */; };
 		30E3C9482156D48C00144D22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E3C9472156D48C00144D22 /* ViewController.swift */; };
 		30E3C94B2156D48C00144D22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E3C9492156D48C00144D22 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3009DFD4215DA2D70012BF5B /* Splash-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splash-2.png"; sourceTree = "<group>"; };
 		30E3C9422156D48C00144D22 /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30E3C9452156D48C00144D22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30E3C9472156D48C00144D22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				30E3C9492156D48C00144D22 /* Main.storyboard */,
 				30E3C94C2156D48E00144D22 /* Assets.xcassets */,
 				30E3C94E2156D48E00144D22 /* LaunchScreen.storyboard */,
+				3009DFD4215DA2D70012BF5B /* Splash-2.png */,
 				30E3C9512156D48E00144D22 /* Info.plist */,
 			);
 			path = Calculator;
@@ -230,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				30E3C9502156D48E00144D22 /* LaunchScreen.storyboard in Resources */,
+				3009DFD5215DA2D70012BF5B /* Splash-2.png in Resources */,
 				30E3C94D2156D48E00144D22 /* Assets.xcassets in Resources */,
 				30E3C94B2156D48C00144D22 /* Main.storyboard in Resources */,
 			);
