@@ -1,6 +1,6 @@
 //
-//  File Name : Calculator
-//  Student ID : 301042442
+//  ViewController.swift
+//  Calculator
 //
 //  Created by Sreeram Ramakrishnan on 2018-09-22.
 //  Copyright © 2018 Centennial College. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController { // Main View Controller Class
+class ViewController: UIViewController {
     
     var valOnScreen:Double = 0
     var firstval:Double = 0
@@ -16,22 +16,22 @@ class ViewController: UIViewController { // Main View Controller Class
     var arithop = 0
     var hasDecimal:Bool = false
     
-    @IBOutlet weak var result: UILabel! //Outlet for Result Label
+    @IBOutlet weak var result: UILabel!
     
-    @IBAction func ArithDec(_ sender: UIButton) { //Action method for the decimal point
+    @IBAction func ArithDec(_ sender: UIButton) {
         
         if(sender.tag==18){
-        if(!hasDecimal){
-            result.text?.append(".")
-            hasDecimal = true
+            if(!hasDecimal){
+                result.text?.append(".")
+                hasDecimal = true
+            }
         }
-    }
         else {
             result.text?.append(String(sender.tag-1))
         }
     }
     
-    @IBAction func digits(_ sender: UIButton) { //Action method for the numbers
+    @IBAction func digits(_ sender: UIButton) {
         if mathFunction == true{
             result.text = String(sender.tag-1)
             valOnScreen = Double(result.text!)!
@@ -43,9 +43,9 @@ class ViewController: UIViewController { // Main View Controller Class
         }
     }
     
-    @IBAction func functions(_ sender: UIButton) { //Action method for the various arithmetic operations and clear screen
+    @IBAction func functions(_ sender: UIButton) {
         
-        if result.text != "" && sender.tag != 11 && sender.tag != 16
+        if result.text != "" && sender.tag != 11 && sender.tag != 16 && mathFunction ==  false
         {
             firstval = Double(result.text!)!
             if sender.tag == 12
@@ -66,12 +66,7 @@ class ViewController: UIViewController { // Main View Controller Class
             }
             if sender.tag == 19
             {
-                if(firstval > 0){
-                    result.text = String(sqrt(firstval))
-                }
-                else{
-                    result.text = "0"
-                }
+                result.text = String(sqrt(firstval))
             }
             
             arithop = sender.tag
