@@ -194,6 +194,9 @@
                                 <state key="normal" title="C">
                                     <color key="titleColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="DeleteFunc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bON-r5-5qp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJV-fa-L2Y">
                                 <rect key="frame" x="281" y="205" width="94" height="94"/>

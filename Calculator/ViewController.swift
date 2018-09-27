@@ -103,6 +103,20 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func DeleteFunc(_ sender: UIButton) {
+        if sender.tag == 16
+        {
+            if (result.text!).count > 0
+            {
+                let characters = Array(result.text!)
+                result.text = String((characters.dropLast()))
+                if result.text!.isEmpty
+                {
+                    mathFunction = false
+                }
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
