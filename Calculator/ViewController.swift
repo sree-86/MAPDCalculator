@@ -64,6 +64,15 @@ class ViewController: UIViewController {
             {
                 result.text = "/"
             }
+            if sender.tag == 19
+            {
+                if(firstval > 0){
+                    result.text = String(sqrt(firstval))
+                }
+                else{
+                    result.text = "0"
+                }
+            }
             
             arithop = sender.tag
             mathFunction = true
