@@ -23,15 +23,27 @@ class ViewController: UIViewController {                                // View 
     
     
     
-    @IBAction func digits(_ sender: UIButton) {                         //Arithmetic Operand Action
+    @IBAction func digits(_ sender: UIButton) {//Arithmetic Operand Action
+        
         if mathFunction == true{
+            if (result.text == "0."){
+                result.text?.append(String(sender.tag-1))
+                valOnScreen = Double(result.text!)!
+            }
+            else{
             result.text = String(sender.tag-1)
             valOnScreen = Double(result.text!)!
             mathFunction = false
+            }
         }
         else{
+            if (result.text == "."){
+               result.text?.append(String(sender.tag-1))
+            }
+            else{
             result.text! += String(sender.tag-1)
             valOnScreen = Double(result.text!)!
+            }
         }
     }
     
@@ -45,31 +57,35 @@ class ViewController: UIViewController {                                // View 
                 result.text = "+"
                 arithop = sender.tag
                 mathFunction = true
+                hasDecimal = false
             }
             if sender.tag == 13
             {
                 result.text = "-"
                 arithop = sender.tag
                 mathFunction = true
+                hasDecimal = false
             }
             if sender.tag == 14
             {
                 result.text = "*"
                 arithop = sender.tag
                 mathFunction = true
+                hasDecimal = false
             }
             if sender.tag == 15
             {
                 result.text = "/"
                 arithop = sender.tag
                 mathFunction = true
+                hasDecimal = false
             }
             
-            
+            // Square Root Function
             if sender.tag == 19
             {
                 result.text = String(sqrt(firstval))
-                hasDecimal = false
+                
             }
             
         }
@@ -79,6 +95,7 @@ class ViewController: UIViewController {                                // View 
             firstval = 0
             valOnScreen = 0
             arithop = 0
+            hasDecimal = false
         }
         else if sender.tag == 11
         {
@@ -119,11 +136,16 @@ class ViewController: UIViewController {                                // View 
     }
     
     @IBAction func ArithDec(_ sender: UIButton) {                   // Decimal Function Action
-        result.text = "0"
+        
         if(sender.tag==18){
             if(!hasDecimal){
+                if( mathFunction == true){
+                    result.text = "0."
+                }
+                else{
                 result.text?.append(".")
                 hasDecimal = true
+                }
             }
         }
         else {
