@@ -52,28 +52,28 @@ class ViewController: UIViewController {                                // View 
         if result.text != "" && sender.tag != 11 && sender.tag != 16 && mathFunction ==  false
         {
             firstval = Double(result.text!)!
-            if sender.tag == 12
+            if sender.tag == 12                     //addition
             {
                 result.text = "+"
                 arithop = sender.tag
                 mathFunction = true
                 hasDecimal = false
             }
-            if sender.tag == 13
+            if sender.tag == 13                 //subtraction
             {
                 result.text = "-"
                 arithop = sender.tag
                 mathFunction = true
                 hasDecimal = false
             }
-            if sender.tag == 14
+            if sender.tag == 14                 //multiplication
             {
                 result.text = "*"
                 arithop = sender.tag
                 mathFunction = true
                 hasDecimal = false
             }
-            if sender.tag == 15
+            if sender.tag == 15                 //division
             {
                 result.text = "/"
                 arithop = sender.tag
@@ -89,7 +89,7 @@ class ViewController: UIViewController {                                // View 
             }
             
         }
-        if sender.tag == 17
+        if sender.tag == 17                     //All Clear Function
         {
             result.text = ""
             firstval = 0
@@ -97,7 +97,7 @@ class ViewController: UIViewController {                                // View 
             arithop = 0
             hasDecimal = false
         }
-        else if sender.tag == 11
+        else if sender.tag == 11                //Arithmetic Operations
         {
             if arithop == 12
             {
