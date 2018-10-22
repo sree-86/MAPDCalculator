@@ -18,11 +18,7 @@ class ViewController: UIViewController {                                // View 
     var arithop = 0
     var hasDecimal:Bool = false
     
-    
-    @IBOutlet var num: [UIButton]!
-    
-    @IBOutlet weak var result: UILabel!                             // Outlet for Result Label
-    
+    @IBOutlet weak var result: UILabel!
     
     
     @IBAction func digits(_ sender: UIButton) {//Arithmetic Operand Action
@@ -47,65 +43,9 @@ class ViewController: UIViewController {                                // View 
             valOnScreen = Double(result.text!)!
             }
         }
-    }
-    //Change background Colour
-    @IBAction func bgcolor(_ sender: UIBarButtonItem) {
-        let alertController =  UIAlertController(title: "Choose your Colour", message:"", preferredStyle: .alert)
-        let alertAction1 = UIAlertAction(title: "Blue", style: .default) { (alert) in
-            
-            UIView.animate(withDuration: 1, animations: {
-                //self.turnLight.backgroundColor = UIColor.gray
-                self.view.backgroundColor = UIColor.blue
-                
-                
-            }, completion: nil)
-        }
-        
-        let alertAction2 = UIAlertAction(title: "Gray", style: .default) { (alert) in
-            UIView.animate(withDuration: 1, animations: {
-                
-                
-                self.view.backgroundColor = UIColor.gray
-            }, completion: nil)
-        }
-        
-        alertController.addAction(alertAction1)
-        alertController.addAction(alertAction2)
-        // function
-        present(alertController, animated: true, completion: nil)
         
     }
-    
-    @IBAction func editText(_ sender: UIBarButtonItem) {
-        let alertController1 =  UIAlertController(title: "Choose your style", message:"", preferredStyle: .alert)
-        let alertAction3 = UIAlertAction(title: "Black", style: .default) { (alert) in
-            
-            UIView.animate(withDuration: 1, animations: {
-                
-                // textChange
-                for aTextField in self.num{
-                    aTextField.setTitleColor(UIColor.black, for: .normal)
-                }
-            }, completion: nil)
-        }
-        
-        let alertAction4 = UIAlertAction(title: "Blue", style: .default) { (alert) in
-            UIView.animate(withDuration: 1, animations: {
-                // textChange
-                for
-                    
-                    aTextField in self.num{
-                    aTextField.setTitleColor(UIColor.blue, for: .normal)
-                }
-            }, completion: nil)
-        }
-        
-        alertController1.addAction(alertAction3)
-        alertController1.addAction(alertAction4)
-        // function
-        present(alertController1, animated: true, completion: nil)
-    }
-    
+  
     @IBAction func functions(_ sender: UIButton) {                  //Arithmetic Operation Action
         
         if result.text != "" && sender.tag != 11 && sender.tag != 16 && mathFunction ==  false
